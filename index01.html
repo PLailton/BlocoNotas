@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📝 Bloco de Notas</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li>
+                    <button onclick="novo()">Novo</button>
+                </li>
+                <li>
+                    <button onclick="document.getElementById('abrir').click()">Abrir</button>
+                    <input type="file" id="abrir" accept=".txt" onchange="abrirArquivo()" hidden>
+                </li>
+                <li>
+                    <button onclick="saveFile()">Salvar</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <textarea name="texto" id="texto" placeholder="Digite seu texto aqui..."></textarea>
+    
+
+    <script src="./script.js"></script>
+</body>
+</html>
